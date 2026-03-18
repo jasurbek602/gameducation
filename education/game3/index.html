@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brain game</title>
+  <link rel="stylesheet" href="/game3/style.css">
+</head>
+<body>
+  <h2>🧠 Brain Speed Game</h2>
+
+  <p>3 son chiqadi — yig‘indisini top!</p>
+  
+  <div class="box" id="nums"></div>
+  
+  <input id="answer" autocomplete="off">
+  <br><br>
+  <button onclick="start()">Start</button>
+  <button onclick="check()">Answer</button>
+  
+  <p id="score">Score: 0</p>
+  
+  <script>
+  let nums = [];
+  let score = 0;
+  let correct;
+  
+  function start(){
+    nums = [
+      Math.floor(Math.random()*10),
+      Math.floor(Math.random()*10),
+      Math.floor(Math.random()*10)
+    ];
+  
+    correct = nums[0]+nums[1]+nums[2];
+  
+    document.getElementById("nums").innerText = nums.join(" + ");
+  
+    setTimeout(()=>{
+      document.getElementById("nums").innerText = "???";
+    },2000);
+  }
+  
+  function check(){
+    var ans = document.getElementById("answer").value;
+    
+    if(ans == correct){
+      score++;
+      alert("🔥 To'g'ri!");
+      document.getElementById("answer").value = "";      
+    } else {
+      alert("❌ Xato! Javob: "+correct);
+      document.getElementById("answer").value = "";      
+    }
+    
+    
+    document.getElementById("score").innerText = "Score: "+score;
+  }
+</script>
+
+</body>
+</html>

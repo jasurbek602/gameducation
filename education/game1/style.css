@@ -1,0 +1,48 @@
+body{
+font-family: Arial;
+text-align:center;
+background:#f2f2f2;
+}
+
+.container{
+background:white;
+width:600px;
+padding:20px;
+
+border-radius:15px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+position: relative;
+margin: auto;
+z-index: 1500;
+}
+h6{
+    color: red;
+    font-size: 150px;
+    z-index: 1800;
+    position: absolute;
+    left: 25%;
+    top: 45%;
+    text-shadow: 0 0 10px red;
+    margin: auto;
+    display:none;
+
+}
+#cong2{
+    top: 20%;
+    left: 7%;
+}
+button{
+padding:10px 20px;
+font-size:16px;
+margin-top:10px;
+cursor:pointer;
+border-radius: 15px;
+border: 0;
+background: aqua;
+
+}
+
+input{
+padding:8px;
+font-size:16px;
+}
